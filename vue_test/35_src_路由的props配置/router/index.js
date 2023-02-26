@@ -39,14 +39,20 @@ export default new VueRouter({
 							// props:true
 
 							//props的第三种写法，值为函数
-							props($route){
-								return {
-									id:$route.query.id,
-									title:$route.query.title,
-									a:1,
-									b:'hello'
-								}
-							}
+							// props($route){
+							// 	return {
+							// 		id:$route.query.id,
+							// 		title:$route.query.title,
+							// 		a:1,
+							// 		b:'hello'
+							// 	}
+							// }
+							props: ($route) => { ({
+								id:$route.query.id,
+								title:$route.query.title,
+								a:1,
+								b:'hello'
+							}) }
 
 						}
 					]
