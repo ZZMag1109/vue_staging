@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <!-- <div>
 		<button>原生的按钮</button>
 		<input type="text">
 		<atguigu-row>
@@ -22,11 +22,15 @@
 			<el-button type="warning" icon="el-icon-star-off" circle></el-button>
 			<el-button type="danger" icon="el-icon-delete" circle></el-button>
 		</atguigu-row>
-  </div>
+  </div> -->
+  <water-mark />
 </template>
 
 <script>
+import waterMark from './components/waterMark/waterMark.vue'
+
 	export default {
-		name:'App',
+	name: 'App',
+	components: { waterMark },
 	}
 </script>
