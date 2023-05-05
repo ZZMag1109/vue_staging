@@ -1,5 +1,5 @@
 <template>
-  <div v-html="str"></div>
+  <!-- <div v-html="str"></div> -->
   <!-- <div class="layout-ui">
     <el-button @click="showDialog">弹出框</el-button>
     <el-dialog
@@ -9,18 +9,23 @@
       <water-mark />
     </el-dialog>
   </div> -->
+  <div>
+    <DiffJSON />
+  </div>
 </template>
 
 <script>
 import waterMark from './components/waterMark/waterMark.vue';
+import DiffJSON from './components/DiffJSON.vue';
+
 export default {
-  components: { waterMark },
+  components: { waterMark, DiffJSON },
   name: "App",
   data() {
     return {
       dialogVisible: false,
-      str1: "<span>11111111</span>",
-      str: "留学讲座策划书 \n <div style='padding:10px 5px 0px 20px;margin:10px 0px 0px -15px'>1. 津桥留学讲'座策'划书</div>2. 出国留学讲座策划书 3. 留学讲座策划书 4. 留学讲座策划书 1、津桥留学讲座策划书 一、讲座背景 金融危机过后，国际经济环境紧张，人名币对美元，欧元等留学热国的汇率上升，留 学经费的减少使更多大学生想要留学，去哪学，学什么，该怎么准备成为同学们关心 的问题。同时，许多大学生对国外的文化风俗缺乏了解，渴望有机会体验国外的文化。 二、讲座主题 改变—机会，重塑你的人生拼图 三、讲座时间及地点 时间：9 月 22 日 13：30 及 9 月 24 日 14：00 地点：C504 及 D311 四、参与对象 对象：浙江工商大学群体学生，其中以大一大二年级为主 五、主讲人及主讲内容 津桥留学机构专业讲师 主讲内容： 1）、观看英国励志电影，介绍英国风俗文化及旅游名胜 2）、如何选择合适自己的学校，留学英美要什么花费。 3）、留学申请成功经验分享，回答现场同学关于留学方面的提问。 六、前期筹备 1、场地申请 2、前期宣传 （1）制作横幅，挂于行云、流水食堂宣传 （2）通过海报及宣传单来进行全面的宣传，在流水、行云食堂大门摆设海报，各寝室 宣传栏张贴宣传单，并下寝室和教室进行面对面宣传 （3）对大三大四的寝室进行重点宣传，回答同学们提出的各类有关于讲座的问题。 3、讲座现场 PPT 的制作 七、活动现场 1、现场布置",
+      str1: '<span>\n\n\t\n\t\t<meta http-equiv="Content-Type" content="text/html; charset=utf-8">\n\t\t<title>Highcharts Example</title>\n\n\t\t\x3Cscript type="text/javascript" src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js">\x3C/script>\n\t\t<style type="text/css">\n${demo.css}\n\t\t</style>\n\t\t\x3Cscript type="text/javascript">\n$(function () {\n    $(document).ready(function () {\n        Highcharts.setOptions({\n            global: {\n                useUTC: false\n            }\n        });\n\n        $(\'#container\').highcharts({\n            chart: {\n                type: \'spline\',\n                animation: Highcharts.svg, // don\'t animate in old IE\n                marginRight: 10,\n                events: {\n                    load: function () {\n\n                        // set up the updating of the chart each second\n                        var series = this.series[0];\n                        setInterval(function () {\n                            var x = (new Date()).getTime(), // current time\n                                y = Math.random();\n                            series.addPoint([x, y], true, true);\n                        }, 1000);\n                    }\n                }\n            },\n            title: {\n                text: \'Live random data\'\n            },\n            xAxis: {\n                type: \'datetime\',\n                tickPixelInterval: 150\n            },\n            yAxis: {\n                title: {\n                    text: \'Value\'\n                },\n                plotLines: [{\n                    value: 0,\n                    w<span style="color: red">id</span>th: 1,\n                    color: \'#808080\'\n                }]\n            },\n            tooltip: {\n                formatter: function () {\n                    return \'<b>\' + this.series.name + \'</b><br/>\' +\n                        Highcharts.dateFormat(\'%Y-%m-%d %H:%M:%S\', this.x) + \'<br/>\' +\n                        Highcharts.numberFormat(this.y, 2);\n                }\n            },\n            legend: {\n                enabled: false\n            },\n            exporting: {\n                enabled: false\n            },\n            series: [{\n                name: \'Random data\',\n                data: (function () {\n                    // generate an array of random data\n                    var data = [],\n                        time = (new Date()).getTime(),\n                        i;\n\n                    for (i = -19; i <= 0; i += 1) {\n                        data.push({\n                            x: time + i * 1000,\n                            y: Math.random()\n                        });\n                    }\n                    return data;\n                }())\n            }]\n        });\n    });\n});\n\t\t\x3C/script>\n\t\n\t\n\x3Cscript src="http://cdn.hcharts.cn/highcharts/highcharts.js">\x3C/script>\n\x3Cscript src="http://cdn.hcharts.cn/highcharts/modules/exporting.js">\x3C/script>\n\n<div <span="" style="color: red">id="container" style="min-w<span style="color: red">id</span>th: 310px; height: 400px; margin: 0 auto"></div>\n\n\t\n</</span>',
+      str: '/html>'
     };
   },
   methods: {
@@ -165,8 +170,8 @@ export default {
     // this.judgeHtmlStr(this.str)
     // const test = this.isHtml(this.str);
     // console.log(333, test);
-    const test = this.isCommonStr(this.str);
-    console.log(111, test);
+    // const test = this.isCommonStr(this.str);
+    // console.log(111, test);
   },
 };
 </script>
