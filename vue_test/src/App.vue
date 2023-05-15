@@ -23,14 +23,16 @@
 			<el-button type="danger" icon="el-icon-delete" circle></el-button>
 		</atguigu-row>
   </div> -->
-  <water-mark />
+  <Highlighter />
 </template>
 
 <script>
-import waterMark from './components/waterMark/waterMark.vue'
+// import waterMark from './components/waterMark/waterMark.vue'
+// import myTest from './components/test/test.vue'
+import Highlighter from "./components/highlighter/index.vue";
 
-	export default {
-	name: 'App',
-	components: { waterMark },
-	}
+export default {
+  name: "App",
+  components: { Highlighter },
+};
 </script>
