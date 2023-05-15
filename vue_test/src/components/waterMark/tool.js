@@ -26,7 +26,7 @@ const setWatermark = (str, container) => {
  
   // 创建canvas元素(先制作一块背景图)
   const can = document.createElement('canvas')
-  can.width = 200 // 设置每一块的宽度
+  can.width = 250 // 设置每一块的宽度
   can.height = 200 // 高度
   const cans = can.getContext('2d') // 获取canvas画布
   cans.rotate(-20 * Math.PI / 180) // 逆时针旋转π/9  cans.font = '20px Vedana' // 设置字体
@@ -61,6 +61,7 @@ watermark.set = (str, container) => {
   }, 500)
   // 监听页面大小的变化
   window.onresize = () => {
+    debugger
     setWatermark(str, container)
   }
 }

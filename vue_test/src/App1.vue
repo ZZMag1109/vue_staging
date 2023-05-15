@@ -1,5 +1,5 @@
 <template>
-  <!-- <div>
+  <div>
 		<button>原生的按钮</button>
 		<input type="text">
 		<atguigu-row>
@@ -22,24 +22,11 @@
 			<el-button type="warning" icon="el-icon-star-off" circle></el-button>
 			<el-button type="danger" icon="el-icon-delete" circle></el-button>
 		</atguigu-row>
-  </div> -->
-  <Highlighter />
+  </div>
 </template>
 
 <script>
-// import waterMark from './components/waterMark/waterMark.vue'
-// import myTest from './components/test/test.vue'
-import Highlighter from "./components/highlighter/index.vue";
-
-export default {
-  name: "App",
-  components: { Highlighter },
-};
+	export default {
+		name:'App',
+	}
 </script>
-
-<style>
-.layout-ui {
-  width: 100px;
-  height: 100px;
-}
-</style>
