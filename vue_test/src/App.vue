@@ -9,23 +9,25 @@
       <water-mark />
     </el-dialog>
   </div> -->
-  <div>
+  <!-- <div>
     <DiffJSON />
-  </div>
+  </div> -->
+  <Highlighter />
 </template>
 
 <script>
 import waterMark from './components/waterMark/waterMark.vue';
 import DiffJSON from './components/DiffJSON.vue';
+import Highlighter from './components/Highlighter';
 
 export default {
-  components: { waterMark, DiffJSON },
+  components: { waterMark, DiffJSON, Highlighter },
   name: "App",
   data() {
     return {
       dialogVisible: false,
       str1: '<span>\n\n\t\n\t\t<meta http-equiv="Content-Type" content="text/html; charset=utf-8">\n\t\t<title>Highcharts Example</title>\n\n\t\t\x3Cscript type="text/javascript" src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js">\x3C/script>\n\t\t<style type="text/css">\n${demo.css}\n\t\t</style>\n\t\t\x3Cscript type="text/javascript">\n$(function () {\n    $(document).ready(function () {\n        Highcharts.setOptions({\n            global: {\n                useUTC: false\n            }\n        });\n\n        $(\'#container\').highcharts({\n            chart: {\n                type: \'spline\',\n                animation: Highcharts.svg, // don\'t animate in old IE\n                marginRight: 10,\n                events: {\n                    load: function () {\n\n                        // set up the updating of the chart each second\n                        var series = this.series[0];\n                        setInterval(function () {\n                            var x = (new Date()).getTime(), // current time\n                                y = Math.random();\n                            series.addPoint([x, y], true, true);\n                        }, 1000);\n                    }\n                }\n            },\n            title: {\n                text: \'Live random data\'\n            },\n            xAxis: {\n                type: \'datetime\',\n                tickPixelInterval: 150\n            },\n            yAxis: {\n                title: {\n                    text: \'Value\'\n                },\n                plotLines: [{\n                    value: 0,\n                    w<span style="color: red">id</span>th: 1,\n                    color: \'#808080\'\n                }]\n            },\n            tooltip: {\n                formatter: function () {\n                    return \'<b>\' + this.series.name + \'</b><br/>\' +\n                        Highcharts.dateFormat(\'%Y-%m-%d %H:%M:%S\', this.x) + \'<br/>\' +\n                        Highcharts.numberFormat(this.y, 2);\n                }\n            },\n            legend: {\n                enabled: false\n            },\n            exporting: {\n                enabled: false\n            },\n            series: [{\n                name: \'Random data\',\n                data: (function () {\n                    // generate an array of random data\n                    var data = [],\n                        time = (new Date()).getTime(),\n                        i;\n\n                    for (i = -19; i <= 0; i += 1) {\n                        data.push({\n                            x: time + i * 1000,\n                            y: Math.random()\n                        });\n                    }\n                    return data;\n                }())\n            }]\n        });\n    });\n});\n\t\t\x3C/script>\n\t\n\t\n\x3Cscript src="http://cdn.hcharts.cn/highcharts/highcharts.js">\x3C/script>\n\x3Cscript src="http://cdn.hcharts.cn/highcharts/modules/exporting.js">\x3C/script>\n\n<div <span="" style="color: red">id="container" style="min-w<span style="color: red">id</span>th: 310px; height: 400px; margin: 0 auto"></div>\n\n\t\n</</span>',
-      str: '/html>'
+      str: `<span>{<span class="xt-key">"busId":</span><span class="xt-number">2981</span>,<span class="xt-key">"contentType":</span><span class="xt-number">6</span>,<span class="xt-key">"auditType":</span><span class="xt-number">0</span>,<span class="xt-key">"layoutId":</span></span><span style='background-color:yellow'><span class="xt-string">"</span><span>4</span><span style='background-color:yellow'>"</span></span><span>,<span class="xt-key">"name":</span><span class="xt-string">"quark网盘图片可视化模板"</span>,<span class="xt-key">"value":</span><span class="xt-string">"[{\\"name\\":\\"slot-1\\",\\"componentList\\":[{\\"value\\":{\\"span\\":\\"24\\",\\"isShowPartition\\":false,\\"imgHoverMaxWidth\\":\\"400\\",\\"imgHoverMaxHeight\\":\\"500\\",\\"delay\\":\\"300\\",\\"isShowTitle\\":false,\\"isShowKeywordTip\\":true,\\"isBold\\":false,\\"fontColor\\":\\"#333\\",\\"backgroundColor\\":\\"rgba(255,&ensp;255,&ensp;255,&ensp;0)\\",\\"linkJump\\":\\"</span><span style='background-color:yellow'>none</span><span>\\",\\"infoConfig\\":[\\"id\\",\\"userId\\",\\"user\\",\\"module\\",\\"skillGroup\\",\\"history\\",\\"machineResult\\",\\"IP\\",\\"IMEI\\",\\"ocr\\",\\"createTime\\",\\"publicTime\\"],\\"copyId\\":true,\\"qualityConfig\\":[\\"qaNote\\",\\"isTypical\\",\\"isIgnoreDiff\\"],\\"functionConfig\\":[</span><span>]},\\"componentName\\":\\"xtPicture\\",\\"name\\":\\"图片审核\\"}]}]"</span>,<span class="xt-key">"moduleId":</span></span><span style='background-color:yellow'>[]</span><span>,<span class="xt-key">"skillGroupId":</span></span><span style='background-color:yellow'>[]</span><span>,<span class="xt-key">"moduleName":</span><span class="xt-string">""</span>}</span>`
     };
   },
   methods: {

@@ -9116,6 +9116,11 @@
   dependencies:
     "defaults" "^1.0.3"
 
+"web-highlighter@^0.7.4":
+  "integrity" "sha512-07mWw6ib+Abcr/fuKEWYPy1Y0MsCOz6yUUVw9xMpyt5UzyXWtSlcwzy2YqnccCP/LjtM9MZHQSo3dbGJII8h6w=="
+  "resolved" "https://registry.npmjs.org/web-highlighter/-/web-highlighter-0.7.4.tgz"
+  "version" "0.7.4"
+
 "webpack-bundle-analyzer@^3.8.0":
   "integrity" "sha1-9vlNsQj7V05BWtMT3kGicH0z7zw="
   "resolved" "https://registry.nlark.com/webpack-bundle-analyzer/download/webpack-bundle-analyzer-3.9.0.tgz?cache=0&sync_timestamp=1621259036556&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fwebpack-bundle-analyzer%2Fdownload%2Fwebpack-bundle-analyzer-3.9.0.tgz"
